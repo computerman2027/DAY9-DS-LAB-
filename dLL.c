@@ -107,8 +107,23 @@ voide display()
 
 int main()
 {
+	int ch;
 	while(1)
 	{
-		
+		printf("1. Insert at begining\n2. Insert at end\n3. delete at begining\n4. delete at end\n5. display\n6. Exit\nEnter your choice : ");
+		scanf("%d",&ch);
+		switch(ch)
+		{
+			case 1:
+			case 2:
+			case 3:
+			case 4:
+			case 5:
+			case 6:
+				printf("End of Program\n");
+				return 0;
+			default:
+			printf("INVALID Input\n");		
+		}		
 	}
 }
