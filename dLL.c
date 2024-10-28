@@ -107,7 +107,7 @@ voide display()
 
 int main()
 {
-	int ch;
+	int ch,val;
 	while(1)
 	{
 		printf("1. Insert at begining\n2. Insert at end\n3. delete at begining\n4. delete at end\n5. display\n6. Exit\nEnter your choice : ");
@@ -115,10 +115,24 @@ int main()
 		switch(ch)
 		{
 			case 1:
+				printf("Enter value to be inserted : ");
+				scanf("%d",&val);
+				insert_beg(val);
+				break;
 			case 2:
+				printf("Enter value to be inserted : ");
+				scanf("%d",&val);
+				insert_end(val);
+				break;
 			case 3:
+				delete_beg();
+				break;
 			case 4:
+				delete_end();
+				break;
 			case 5:
+				display();
+				break;
 			case 6:
 				printf("End of Program\n");
 				return 0;
