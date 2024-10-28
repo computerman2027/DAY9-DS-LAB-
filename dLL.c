@@ -62,3 +62,53 @@ void delete_beg()
 	}
 	free(del);
 }
+
+void delete_end()
+{
+	if(head==NULL)
+	{
+		printf("Linked List empty. Nothing to be deleted\n");
+		return;
+	}
+	Node* del;
+	if(head->next==NULL)
+	{
+		del=head;
+		head=NULL;
+	}
+	else
+	{
+		Node* temp=head;
+		while(temp->next->next!=NULL)
+		{
+			temp=temp->next;
+		}
+		del=temp->next;
+		temp->next=NULL;
+	}
+	free(del);
+}
+
+voide display()
+{
+	if(head==NULL)
+	{
+		printf("Linked List empty. Nothing to be displayed\n");
+		return;
+	}
+	Node* temp= head;
+	while(temp!=NULL)
+	{
+		printf(temp->next==NULL?"%d\n":"%d <-> ",temp->data);
+		temp = temp->next;
+	}
+}
+
+
+int main()
+{
+	while(1)
+	{
+		
+	}
+}
