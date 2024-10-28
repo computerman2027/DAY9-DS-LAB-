@@ -10,7 +10,7 @@ typedef struct node
 
 Node* head=NULL;
 
-Node* createNode(int data)
+Node* createNode(int item)
 {
 	Node* newnode = (Node*)malloc(sizeof(Node));
 	newnode->data=item;
@@ -21,18 +21,18 @@ Node* createNode(int data)
 
 void insert_beg(int data)
 {
-	Node* newnode=createNoode(data);
+	Node* newnode=createNode(data);
 	newnode->next=head;
 	if(head!=NULL)
 	{
-		head->prev=newnode
+		head->prev=newnode;
 	}
 	head=newnode;
 }
 
 void insert_end(int data)
 {
-	Node* newnode=createNoode(data);
+	Node* newnode=createNode(data);
 	if(head==NULL)
 	{
 		head=newnode;
